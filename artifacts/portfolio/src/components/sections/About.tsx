@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Code2, Server, Workflow } from "lucide-react";
+import { Code2, Server, Workflow, MapPin, GraduationCap, Briefcase } from "lucide-react";
 
 export function About() {
   return (
@@ -16,14 +16,30 @@ export function About() {
             <div className="absolute -inset-4 bg-gradient-to-tr from-primary/20 to-secondary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
             <div className="relative aspect-[4/5] rounded-2xl border border-border bg-card overflow-hidden">
               <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-40 mix-blend-luminosity grayscale hover:grayscale-0 transition-all duration-700" />
-              
-              {/* Overlay decor */}
+
               <div className="absolute top-4 left-4 right-4 flex justify-between items-center text-xs font-mono text-muted-foreground/50">
                 <span>01. ABOUT</span>
                 <span>CIS_STUDENT</span>
               </div>
+
+              {/* Info pills */}
+              <div className="absolute top-12 left-4 flex flex-col gap-2">
+                <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-background/70 backdrop-blur-sm border border-border/50 text-xs font-mono text-muted-foreground">
+                  <MapPin size={11} />
+                  Jordan
+                </div>
+                <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-background/70 backdrop-blur-sm border border-border/50 text-xs font-mono text-muted-foreground">
+                  <GraduationCap size={11} />
+                  CIS Student
+                </div>
+                <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/30 text-xs font-mono text-primary">
+                  <Briefcase size={11} />
+                  Open to Work
+                </div>
+              </div>
+
               <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-background/90 to-transparent">
-                <div className="h-1 w-12 bg-primary mb-2 rounded-full" />
+                <div className="h-1 w-12 bg-gradient-to-r from-primary to-secondary mb-2 rounded-full" />
                 <h3 className="font-bold text-lg">System Thinker</h3>
               </div>
             </div>
@@ -34,35 +50,46 @@ export function About() {
               <span className="w-8 h-[1px] bg-primary"></span>
               About Me
             </div>
-            
+
             <h2 className="text-3xl md:text-5xl font-bold text-foreground">
-              Bridging the gap between <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">systems & intelligence</span>.
+              Bridging the gap between{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+                systems & intelligence
+              </span>
+              .
             </h2>
-            
+
             <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
               <p>
-                I'm a Computer Information Systems student and IT trainee passionate about building practical solutions. My work centers on automation, AI tools, and intelligent systems that solve real-world problems.
+                I'm a Computer Information Systems student and IT trainee based in Jordan,
+                passionate about building practical systems that solve real-world problems.
+                My work spans automation, AI integration, Linux administration, and full-stack
+                web development.
               </p>
               <p>
-                I don't just write code; I architect solutions. Whether it's streamlining repetitive Linux sysadmin tasks or integrating modern AI capabilities into web applications, I focus on efficiency, scalability, and clean execution.
+                I don't just write code — I architect solutions. From streamlining repetitive
+                sysadmin tasks with shell scripts to embedding modern AI capabilities into
+                web applications, I focus on efficiency, scalability, and clean execution.
+                With experience in scripting, APIs, automation workflows, and modern web
+                technologies, I bring versatility to every project.
               </p>
             </div>
 
             <div className="grid sm:grid-cols-3 gap-6 mt-8">
-              <div className="flex flex-col gap-3 p-5 rounded-xl border border-border/50 bg-card/50">
-                <Code2 className="text-primary" size={24} />
+              <div className="flex flex-col gap-3 p-5 rounded-xl border border-border/50 bg-card/50 hover:border-primary/40 hover:bg-card transition-all group/card">
+                <Code2 className="text-primary group-hover/card:scale-110 transition-transform" size={24} />
                 <h4 className="font-semibold text-foreground">Development</h4>
                 <p className="text-sm text-muted-foreground">Clean, scalable code in Python & modern web tech.</p>
               </div>
-              
-              <div className="flex flex-col gap-3 p-5 rounded-xl border border-border/50 bg-card/50">
-                <Server className="text-secondary" size={24} />
-                <h4 className="font-semibold text-foreground">IT Support</h4>
+
+              <div className="flex flex-col gap-3 p-5 rounded-xl border border-border/50 bg-card/50 hover:border-secondary/40 hover:bg-card transition-all group/card">
+                <Server className="text-secondary group-hover/card:scale-110 transition-transform" size={24} />
+                <h4 className="font-semibold text-foreground">IT & Linux</h4>
                 <p className="text-sm text-muted-foreground">Network troubleshooting & sysadmin automation.</p>
               </div>
-              
-              <div className="flex flex-col gap-3 p-5 rounded-xl border border-border/50 bg-card/50">
-                <Workflow className="text-primary" size={24} />
+
+              <div className="flex flex-col gap-3 p-5 rounded-xl border border-border/50 bg-card/50 hover:border-primary/40 hover:bg-card transition-all group/card">
+                <Workflow className="text-primary group-hover/card:scale-110 transition-transform" size={24} />
                 <h4 className="font-semibold text-foreground">AI Integration</h4>
                 <p className="text-sm text-muted-foreground">Embedding intelligence into everyday workflows.</p>
               </div>
